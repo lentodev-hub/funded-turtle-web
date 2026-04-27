@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import AnimatedTurtle from "./AnimatedTurtle";
 import { whiteLabel } from "@/config/whiteLabel";
+import { Link } from "react-router-dom";
 
 const CTA = () => (
   <section className="py-24 bg-hero text-white relative overflow-hidden">
@@ -15,9 +16,9 @@ const CTA = () => (
           <a href={whiteLabel.provider.signupUrl}>
             <Button variant="gold" size="xl">Claim your account</Button>
           </a>
-          <a href="#challenges">
+          <Link to="/challenges">
             <Button variant="glass" size="xl">View plans</Button>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="hidden md:block w-64 h-64">
