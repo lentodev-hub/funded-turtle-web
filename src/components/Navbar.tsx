@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, LogOut } from "lucide-react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
+import { useUserRole } from "@/hooks/useUserRole";
 import { toast } from "sonner";
 
 const links = [
@@ -18,6 +19,7 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { user, signOut } = useAuth();
+  const { isAdmin } = useUserRole();
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
@@ -43,6 +45,9 @@ const Navbar = () => {
               {l.label}
             </NavLink>
           ))}
+          {isAdmin && (
+            <NavLink to="/admin" className={linkClass}>Admin</NavLink>
+          )}
         </nav>
         <div className="hidden md:flex items-center gap-3">
           {user ? (
