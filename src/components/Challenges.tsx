@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { challenges, whiteLabel } from "@/config/whiteLabel";
+import { challenges } from "@/config/whiteLabel";
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
 
-const Challenges = () => (
+const Challenges = () => {
+  const { user } = useAuth();
+  return (
   <section id="challenges" className="py-24 bg-secondary/40">
     <div className="container">
       <div className="max-w-2xl mx-auto text-center mb-16">
@@ -37,14 +41,18 @@ const Challenges = () => (
               <li className="flex gap-2"><Check className="w-4 h-4 mt-0.5 shrink-0" /> {c.profitSplit} profit split</li>
               <li className="flex gap-2"><Check className="w-4 h-4 mt-0.5 shrink-0" /> No time limit</li>
             </ul>
-            <a href={`${whiteLabel.provider.checkoutUrl}?plan=${c.id}`} className="block mt-6">
+            <Link
+              to={user ? `/checkout?plan=${c.id}` : `/login?next=${encodeURIComponent(`/checkout?plan=${c.id}`)}`}
+              className="block mt-6"
+            >
               <Button variant={c.popular ? "gold" : "default"} className="w-full">Start now</Button>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Challenges;
