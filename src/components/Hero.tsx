@@ -30,12 +30,12 @@ const Hero = () => {
             the profits. Slow and steady wins.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href={whiteLabel.provider.signupUrl}>
+            <Link to="/challenges">
               <Button variant="hero" size="xl" className="group">
                 Start the Challenge
                 <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </a>
+            </Link>
             <Link to="/how-it-works">
               <Button variant="glass" size="xl">How it works</Button>
             </Link>

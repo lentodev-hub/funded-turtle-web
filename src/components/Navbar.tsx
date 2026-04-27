@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { whiteLabel } from "@/config/whiteLabel";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Menu, X, LogOut } from "lucide-react";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
+import { toast } from "sonner";
 
 const links = [
   { label: "Home", to: "/" },
@@ -16,12 +16,19 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
-  // Close mobile menu on route change
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `text-sm transition-colors ${isActive ? "text-white font-semibold" : "text-white/70 hover:text-white"}`;
+
+  const handleSignOut = async () => {
+    await signOut();
+    toast.success("Signed out");
+    navigate("/");
+  };
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-ocean-deep/70 backdrop-blur-xl border-b border-white/10">
@@ -38,12 +45,25 @@ const Navbar = () => {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <a href={whiteLabel.provider.loginUrl}>
-            <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white">Login</Button>
-          </a>
-          <a href={whiteLabel.provider.signupUrl}>
-            <Button variant="hero">Get Funded</Button>
-          </a>
+          {user ? (
+            <>
+              <span className="text-sm text-white/70 hidden lg:inline">
+                {user.email}
+              </span>
+              <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white" onClick={handleSignOut}>
+                <LogOut className="w-4 h-4" /> Sign out
+              </Button>
+            </>
+          ) : (
+            <>
+              <Link to="/login">
+                <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white">Login</Button>
+              </Link>
+              <Link to="/signup">
+                <Button variant="hero">Get Funded</Button>
+              </Link>
+            </>
+          )}
         </div>
         <button className="md:hidden text-white" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X /> : <Menu />}
@@ -56,9 +76,16 @@ const Navbar = () => {
               {l.label}
             </NavLink>
           ))}
-          <a href={whiteLabel.provider.signupUrl}>
-            <Button variant="hero" className="w-full">Get Funded</Button>
-          </a>
+          {user ? (
+            <Button variant="hero" className="w-full" onClick={handleSignOut}>Sign out</Button>
+          ) : (
+            <>
+              <Link to="/login" className="text-white/90">Login</Link>
+              <Link to="/signup">
+                <Button variant="hero" className="w-full">Get Funded</Button>
+              </Link>
+            </>
+          )}
         </div>
       )}
     </header>
