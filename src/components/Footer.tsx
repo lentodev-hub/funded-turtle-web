@@ -1,30 +1,30 @@
 import { whiteLabel } from "@/config/whiteLabel";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <footer className="bg-ocean-deep text-white/70 py-12 border-t border-white/10">
     <div className="container grid md:grid-cols-4 gap-8">
       <div className="md:col-span-2">
-        <div className="flex items-center gap-2 font-display font-bold text-lg text-white">
+        <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg text-white">
           <span className="text-2xl">🐢</span>
           <span>Funded <span className="text-gradient-gold">Turtle</span></span>
-        </div>
+        </Link>
         <p className="mt-3 text-sm max-w-sm">{whiteLabel.brand.tagline}</p>
         <p className="mt-4 text-xs text-white/50">Powered by <span className="text-white/80">{whiteLabel.provider.name}</span></p>
       </div>
       <div>
         <h4 className="text-white font-semibold mb-3 text-sm">Product</h4>
         <ul className="space-y-2 text-sm">
-          <li><a href="#challenges" className="hover:text-white">Challenges</a></li>
-          <li><a href="#how" className="hover:text-white">How it works</a></li>
-          <li><a href="#features" className="hover:text-white">Features</a></li>
+          <li><Link to="/challenges" className="hover:text-white">Challenges</Link></li>
+          <li><Link to="/how-it-works" className="hover:text-white">How it works</Link></li>
+          <li><Link to="/features" className="hover:text-white">Features</Link></li>
         </ul>
       </div>
       <div>
         <h4 className="text-white font-semibold mb-3 text-sm">Company</h4>
         <ul className="space-y-2 text-sm">
-          <li><a href="#faq" className="hover:text-white">FAQ</a></li>
+          <li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
           <li><a href={`mailto:${whiteLabel.brand.supportEmail}`} className="hover:text-white">Contact</a></li>
-          <li><a href="#" className="hover:text-white">Terms</a></li>
         </ul>
       </div>
     </div>

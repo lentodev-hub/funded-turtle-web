@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import AnimatedTurtle from "./AnimatedTurtle";
 import { whiteLabel } from "@/config/whiteLabel";
 import { ArrowRight, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
