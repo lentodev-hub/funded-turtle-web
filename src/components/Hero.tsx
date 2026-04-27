@@ -35,9 +35,9 @@ const Hero = () => {
                 <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
-            <a href="#how">
+            <Link to="/how-it-works">
               <Button variant="glass" size="xl">How it works</Button>
-            </a>
+            </Link>
           </div>
           <div className="mt-8 flex items-center gap-6 text-sm text-white/60">
             <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-turtle-glow" /> Instant funding options</div>
