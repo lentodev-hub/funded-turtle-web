@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-ocean-deep/70 backdrop-blur-xl border-b border-white/10">
+    <header className="fixed top-7 md:top-8 inset-x-0 z-50 bg-ocean-deep/70 backdrop-blur-xl border-b border-white/10">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg text-white">
           <span className="text-2xl">🐢</span>
