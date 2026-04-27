@@ -6,7 +6,7 @@ import { useAuth } from "@/context/AuthContext";
 
 const Hero = () => {
   const { user } = useAuth();
-  const startHref = user ? "/checkout?plan=snapper" : "/signup?next=/checkout?plan=snapper";
+  const startHref = user ? "/challenges" : "/signup?next=/challenges";
   return (
     <section className="relative overflow-hidden bg-hero text-white pt-28 pb-24 md:pt-36 md:pb-32">
       {/* Underwater light rays */}
