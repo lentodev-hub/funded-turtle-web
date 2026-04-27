@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import AnimatedTurtle from "./AnimatedTurtle";
-import { whiteLabel } from "@/config/whiteLabel";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
 
 const Hero = () => {
+  const { user } = useAuth();
+  const startHref = user ? "/checkout?plan=snapper" : "/signup?next=/checkout?plan=snapper";
   return (
     <section className="relative overflow-hidden bg-hero text-white pt-28 pb-24 md:pt-36 md:pb-32">
       {/* Underwater light rays */}
@@ -30,9 +32,9 @@ const Hero = () => {
             the profits. Slow and steady wins.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link to="/challenges">
+            <Link to={startHref}>
               <Button variant="hero" size="xl" className="group">
-                Start the Challenge
+                Start now
                 <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
