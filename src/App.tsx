@@ -11,6 +11,8 @@ import HowItWorksPage from "./pages/HowItWorksPage";
 import FeaturesPage from "./pages/FeaturesPage";
 import FAQPage from "./pages/FAQPage";
 import AuthPage from "./pages/AuthPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import AdminPage from "./pages/AdminPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -31,6 +33,8 @@ const App = () => (
               <Route path="/how-it-works" element={<HowItWorksPage />} />
               <Route path="/features" element={<FeaturesPage />} />
               <Route path="/faq" element={<FAQPage />} />
+              <Route path="/checkout" element={<CheckoutPage />} />
+              <Route path="/admin" element={<AdminPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

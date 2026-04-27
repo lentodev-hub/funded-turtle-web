@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation, useSearchParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,7 +19,8 @@ type Mode = "login" | "signup";
 const AuthPage = ({ mode }: { mode: Mode }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const redirectTo = (location.state as { from?: string } | null)?.from ?? "/";
+  const [params] = useSearchParams();
+  const redirectTo = params.get("next") ?? (location.state as { from?: string } | null)?.from ?? "/";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
