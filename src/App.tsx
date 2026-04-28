@@ -19,6 +19,10 @@ import TradingObjectivesPage from "./pages/TradingObjectivesPage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+import AcademyPage from "./pages/AcademyPage";
+import AffiliatesPage from "./pages/AffiliatesPage";
+import CareersPage from "./pages/CareersPage";
+import LegalPage from "./pages/LegalPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -45,6 +49,10 @@ const App = () => (
               <Route path="/about" element={<AboutPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/academy" element={<AcademyPage />} />
+              <Route path="/affiliates" element={<AffiliatesPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/legal/:slug" element={<LegalPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/admin" element={<AdminPage />} />
             </Route>
