@@ -11,19 +11,21 @@ const Hero = () => {
     <section className="relative overflow-hidden bg-hero text-white pt-28 pb-24 md:pt-36 md:pb-32">
       {/* Underwater light rays */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
-        <div className="absolute -top-20 left-1/4 w-32 h-[700px] bg-turtle-glow/20 blur-3xl rotate-12" />
-        <div className="absolute -top-20 right-1/3 w-40 h-[700px] bg-gold/10 blur-3xl -rotate-12" />
+        <div className="absolute -top-20 left-1/4 w-32 h-[700px] bg-turtle-glow/20 blur-3xl rotate-12 animate-float-slow" />
+        <div className="absolute -top-20 right-1/3 w-40 h-[700px] bg-gold/10 blur-3xl -rotate-12 animate-float-slow" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/3 left-10 w-72 h-72 rounded-full bg-turtle-glow/10 blur-3xl animate-blob" />
+        <div className="absolute bottom-10 right-10 w-72 h-72 rounded-full bg-gold/10 blur-3xl animate-blob" style={{ animationDelay: "4s" }} />
       </div>
 
       <div className="container relative grid lg:grid-cols-2 gap-12 items-center">
         <div className="animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-medium mb-6 hover:bg-white/15 transition-colors">
             <span className="w-2 h-2 rounded-full bg-turtle-glow animate-pulse" />
             Trusted by 12,000+ funded traders
           </div>
           <h1 className="font-display font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
             Trade big.<br />
-            <span className="text-gradient-gold">Move smart.</span><br />
+            <span className="text-gradient-animated">Move smart.</span><br />
             Get funded.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/75 max-w-xl">
@@ -49,7 +51,9 @@ const Hero = () => {
         </div>
 
         <div className="relative h-[380px] md:h-[480px] animate-scale-in">
-          <AnimatedTurtle className="w-full h-full" />
+          <div className="absolute inset-0 animate-float">
+            <AnimatedTurtle className="w-full h-full" />
+          </div>
         </div>
       </div>
 
