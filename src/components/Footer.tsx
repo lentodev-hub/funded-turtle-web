@@ -13,18 +13,23 @@ const Footer = () => (
         <p className="mt-4 text-xs text-white/50">Powered by <span className="text-white/80">{whiteLabel.provider.name}</span></p>
       </div>
       <div>
-        <h4 className="text-white font-semibold mb-3 text-sm">Product</h4>
+        <h4 className="text-white font-semibold mb-3 text-sm">Trade</h4>
         <ul className="space-y-2 text-sm">
           <li><Link to="/challenges" className="hover:text-white">Challenges</Link></li>
+          <li><Link to="/trading-rules" className="hover:text-white">Trading rules</Link></li>
+          <li><Link to="/trading-objectives" className="hover:text-white">Trading objectives</Link></li>
+          <li><Link to="/scaling-plan" className="hover:text-white">Scaling plan</Link></li>
           <li><Link to="/how-it-works" className="hover:text-white">How it works</Link></li>
-          <li><Link to="/features" className="hover:text-white">Features</Link></li>
         </ul>
       </div>
       <div>
         <h4 className="text-white font-semibold mb-3 text-sm">Company</h4>
         <ul className="space-y-2 text-sm">
+          <li><Link to="/about" className="hover:text-white">About</Link></li>
+          <li><Link to="/features" className="hover:text-white">Features</Link></li>
+          <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
           <li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
-          <li><a href={`mailto:${whiteLabel.brand.supportEmail}`} className="hover:text-white">Contact</a></li>
+          <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
         </ul>
       </div>
     </div>
