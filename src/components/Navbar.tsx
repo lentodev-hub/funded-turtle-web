@@ -7,14 +7,13 @@ import { useUserRole } from "@/hooks/useUserRole";
 import { toast } from "sonner";
 
 const links = [
-  { label: "Home", to: "/" },
   { label: "Challenges", to: "/challenges" },
-  { label: "How it works", to: "/how-it-works" },
   { label: "Rules", to: "/trading-rules" },
   { label: "Scaling", to: "/scaling-plan" },
-  { label: "About", to: "/about" },
+  { label: "Academy", to: "/academy" },
+  { label: "Affiliates", to: "/affiliates" },
   { label: "Blog", to: "/blog" },
-  { label: "Contact", to: "/contact" },
+  { label: "About", to: "/about" },
 ];
 
 const Navbar = () => {
