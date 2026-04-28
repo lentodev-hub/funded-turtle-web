@@ -10,8 +10,11 @@ const links = [
   { label: "Home", to: "/" },
   { label: "Challenges", to: "/challenges" },
   { label: "How it works", to: "/how-it-works" },
-  { label: "Features", to: "/features" },
-  { label: "FAQ", to: "/faq" },
+  { label: "Rules", to: "/trading-rules" },
+  { label: "Scaling", to: "/scaling-plan" },
+  { label: "About", to: "/about" },
+  { label: "Blog", to: "/blog" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
