@@ -23,6 +23,7 @@ import AcademyPage from "./pages/AcademyPage";
 import AffiliatesPage from "./pages/AffiliatesPage";
 import CareersPage from "./pages/CareersPage";
 import LegalPage from "./pages/LegalPage";
+import LoyaltyPage from "./pages/LoyaltyPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -57,6 +58,7 @@ const App = () => (
               <Route path="/affiliates" element={<AffiliatesPage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/legal/:slug" element={<LegalPage />} />
+              <Route path="/loyalty" element={<LoyaltyPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/admin" element={<AdminPage />} />
             </Route>

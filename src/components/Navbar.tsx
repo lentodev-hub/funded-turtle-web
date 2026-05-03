@@ -12,6 +12,7 @@ const links = [
   { label: "Scaling", to: "/scaling-plan" },
   { label: "Academy", to: "/academy" },
   { label: "Affiliates", to: "/affiliates" },
+  { label: "Loyalty", to: "/loyalty" },
   { label: "Blog", to: "/blog" },
   { label: "About", to: "/about" },
 ];
