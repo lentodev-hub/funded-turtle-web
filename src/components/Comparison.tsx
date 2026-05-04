@@ -1,7 +1,7 @@
 import { Check, X } from "lucide-react";
 
 const rows = [
-  { label: "Profit split up to 90%", us: true, them: false },
+  { label: "Profit split up to 70%", us: true, them: false },
   { label: "Same-day payouts", us: true, them: false },
   { label: "No minimum trading days", us: true, them: false },
   { label: "Refundable challenge fee", us: true, them: false },

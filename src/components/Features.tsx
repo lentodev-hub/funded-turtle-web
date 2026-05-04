@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 const features = [
   { icon: Zap, title: "Lightning execution", desc: "Sub-30ms order routing on every major asset class." },
   { icon: Shield, title: "Trader-friendly rules", desc: "No minimum trading days. No restrictive lot caps." },
-  { icon: TrendingUp, title: "Up to 90% profit split", desc: "Keep more of what you make. Scale to $2M total allocation." },
+  { icon: TrendingUp, title: "Up to 70% profit split", desc: "Keep more of what you make. Scale to $2M total allocation." },
   { icon: Wallet, title: "Same-day payouts", desc: "Withdraw via crypto or wire — processed in under 24 hours." },
   { icon: Clock, title: "Instant funding", desc: "Skip the challenge with our Express plans and trade today." },
   { icon: Globe, title: "Trade anywhere", desc: "MT4, MT5, cTrader & TradeLocker — desktop, web, mobile." },
