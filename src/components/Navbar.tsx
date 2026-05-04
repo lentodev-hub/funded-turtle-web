@@ -41,7 +41,9 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg text-white">
           <span className="text-2xl">🐢</span>
-          <span>Funded <span className="text-gradient-gold">Turtle</span></span>
+          {location.pathname !== "/trades" && (
+            <span>Funded <span className="text-gradient-gold">Turtle</span></span>
+          )}
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
