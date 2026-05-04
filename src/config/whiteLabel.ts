@@ -52,9 +52,9 @@ export type Challenge = {
 };
 
 export const challenges: Challenge[] = [
-  { id: "shellling", size: "$10K",  price: "$89",  profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "80%" },
-  { id: "snapper",   size: "$25K",  price: "$179", profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "85%", popular: true },
-  { id: "loggerhead",size: "$50K",  price: "$289", profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "85%" },
-  { id: "leatherback",size: "$100K",price: "$489", profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "90%" },
-  { id: "galapagos", size: "$200K", price: "$989", profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "90%" },
+  { id: "shellling", size: "$10K",  price: "$89",  profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "70%" },
+  { id: "snapper",   size: "$25K",  price: "$179", profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "70%", popular: true },
+  { id: "loggerhead",size: "$50K",  price: "$289", profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "70%" },
+  { id: "leatherback",size: "$100K",price: "$489", profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "70%" },
+  { id: "galapagos", size: "$200K", price: "$989", profitTarget: "8%", maxDailyLoss: "5%", maxLoss: "10%", profitSplit: "70%" },
 ];
