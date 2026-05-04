@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 const steps = [
   { n: "01", title: "Choose your shell", desc: "Pick a challenge size from $10K to $200K. One-time fee, refunded on first payout." },
   { n: "02", title: "Hit the target", desc: "Reach 8% profit while respecting the 5% daily / 10% max drawdown. No time limit." },
-  { n: "03", title: "Get funded", desc: "Trade a live-simulated account. Withdraw up to 90% of profits — same day." },
+  { n: "03", title: "Get funded", desc: "Trade a live-simulated account. Withdraw up to 70% of profits — same day." },
 ];
 
 const HowItWorks = () => (

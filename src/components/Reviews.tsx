@@ -20,7 +20,7 @@ const reviews = [
     name: "Diego L.",
     role: "Funded Trader · $200K",
     avatar: "D",
-    text: "90% profit split + no minimum days = a serious trader's dream. Already scaled to my second account.",
+    text: "70% profit split + no minimum days = a serious trader's dream. Already scaled to my second account.",
   },
   {
     name: "Priya S.",

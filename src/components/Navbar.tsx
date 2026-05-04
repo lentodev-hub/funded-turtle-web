@@ -8,6 +8,7 @@ import { toast } from "sonner";
 
 const links = [
   { label: "Challenges", to: "/challenges" },
+  { label: "Trades", to: "/trades" },
   { label: "Rules", to: "/trading-rules" },
   { label: "Scaling", to: "/scaling-plan" },
   { label: "Academy", to: "/academy" },

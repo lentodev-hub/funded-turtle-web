@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 const stats = [
   { value: "$48M+", label: "Paid to traders", icon: TrendingUp },
   { value: "12,400", label: "Funded accounts", icon: Users },
-  { value: "90%", label: "Max profit split", icon: Percent },
+  { value: "70%", label: "Max profit split", icon: Percent },
   { value: "<24h", label: "Payout speed", icon: Zap },
 ];
 

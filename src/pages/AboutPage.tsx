@@ -32,7 +32,7 @@ const AboutPage = () => (
           <h2 className="font-display text-3xl font-bold">Our mission</h2>
           <p className="text-muted-foreground">
             We exist to remove the biggest barrier in trading — capital. Talented traders shouldn't have to risk
-            their life savings to prove themselves. Pass a fair evaluation, get funded, keep up to 90% of what you make.
+            their life savings to prove themselves. Pass a fair evaluation, get funded, keep up to 70% of what you make.
           </p>
           <h2 className="font-display text-3xl font-bold mt-10">Our values</h2>
           <ul className="text-muted-foreground space-y-2">

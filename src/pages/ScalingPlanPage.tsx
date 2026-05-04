@@ -3,12 +3,12 @@ import CTA from "@/components/CTA";
 import { Check } from "lucide-react";
 
 const tiers = [
-  { size: "$10K → $25K", trigger: "10% profit in 4 months (2 payouts)", split: "80%" },
-  { size: "$25K → $50K", trigger: "10% profit in 4 months (2 payouts)", split: "85%" },
-  { size: "$50K → $100K", trigger: "10% profit in 4 months (2 payouts)", split: "85%" },
-  { size: "$100K → $200K", trigger: "10% profit in 4 months (2 payouts)", split: "90%" },
-  { size: "$200K → $500K", trigger: "Performance review", split: "90%" },
-  { size: "$500K → $2M", trigger: "Performance review", split: "90%" },
+  { size: "$10K → $25K", trigger: "10% profit in 4 months (2 payouts)", split: "70%" },
+  { size: "$25K → $50K", trigger: "10% profit in 4 months (2 payouts)", split: "70%" },
+  { size: "$50K → $100K", trigger: "10% profit in 4 months (2 payouts)", split: "70%" },
+  { size: "$100K → $200K", trigger: "10% profit in 4 months (2 payouts)", split: "70%" },
+  { size: "$200K → $500K", trigger: "Performance review", split: "70%" },
+  { size: "$500K → $2M", trigger: "Performance review", split: "70%" },
 ];
 
 const ScalingPlanPage = () => (

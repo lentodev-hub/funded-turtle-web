@@ -28,7 +28,7 @@ const phases = [
       ["Profit target", "—"],
       ["Max daily loss", "5%"],
       ["Max overall loss", "10%"],
-      ["Profit split", "Up to 90%"],
+      ["Profit split", "Up to 70%"],
       ["Payout cycle", "On-demand (24h)"],
     ],
   },

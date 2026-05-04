@@ -30,7 +30,7 @@ const Hero = () => {
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/75 max-w-xl">
             Funded Turtle gives ambitious traders up to <span className="text-gold font-semibold">$200,000</span> in
-            simulated capital. Pass our challenge, keep up to <span className="text-gold font-semibold">90%</span> of
+            simulated capital. Pass our challenge, keep up to <span className="text-gold font-semibold">70%</span> of
             the profits. Slow and steady wins.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
