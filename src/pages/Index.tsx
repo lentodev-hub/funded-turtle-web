@@ -7,12 +7,14 @@ import Challenges from "@/components/Challenges";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import WelcomeBanner from "@/components/WelcomeBanner";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <main>
+        <WelcomeBanner />
         <Hero />
         <Stats />
         <Features />
