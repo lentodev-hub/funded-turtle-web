@@ -37,6 +37,8 @@ const LoyaltyPage = () => (
       description="Our way of saying thanks. Every two successful referrals unlocks a free retry of the funded account you bought — perfect insurance if you ever fail."
     />
 
+    <ReferralTracker />
+
     <section className="py-20 bg-background">
       <div className="container max-w-5xl">
         <div className="grid md:grid-cols-3 gap-5">
