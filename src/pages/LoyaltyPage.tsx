@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import CTA from "@/components/CTA";
+import ReferralTracker from "@/components/ReferralTracker";
 import { Gift, Users, RefreshCw, ShieldCheck, Trophy, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
