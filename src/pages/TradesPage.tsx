@@ -2,6 +2,8 @@ import { ArrowDownUp, FilePlus2, MoreHorizontal, Wallet, TrendingUp, ArrowUpRigh
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import WelcomeBanner from "@/components/WelcomeBanner";
+import { useAuth } from "@/context/AuthContext";
 
 type Position = {
   symbol: string;
