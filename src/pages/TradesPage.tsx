@@ -22,24 +22,29 @@ const positions: Position[] = [
 ];
 
 const TradesPage = () => {
+  const { user } = useAuth();
   const equity = 9249.43;
   const balance = 8578.41;
   const margin = 558.53;
   const freeMargin = 8690.90;
   const marginLevel = 1656.03;
   const totalPnl = positions.reduce((s, p) => s + p.pnl, 0);
-  const availableForWithdrawal = Math.max(0, equity - balance); // floating profit available
+  const availableForWithdrawal = Math.max(0, equity - balance);
+
+  const accountStart = user?.created_at ? new Date(user.created_at) : new Date(Date.now() - 1000 * 60 * 60 * 24 * 27);
+  const daysWithAccount = Math.max(0, Math.floor((Date.now() - accountStart.getTime()) / (1000 * 60 * 60 * 24)));
 
   return (
     <>
+      <WelcomeBanner compact />
       <PageHeader
-        eyebrow="Live account"
+        eyebrow={`Live account · Day ${daysWithAccount}`}
         title="My trades"
-        description="A real-time snapshot of open positions, account equity, and how much you can withdraw right now."
+        description={`A real-time snapshot of open positions, account equity, and how much you can withdraw right now. You've held this funded account for ${daysWithAccount} day${daysWithAccount === 1 ? "" : "s"}.`}
       />
 
       {/* Top widget: Available for withdrawals */}
-      <section className="bg-background -mt-10 relative z-10">
+      <section className="bg-background relative z-10 pt-6">
         <div className="container">
           <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/15 via-background to-background shadow-elegant p-6 md:p-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
