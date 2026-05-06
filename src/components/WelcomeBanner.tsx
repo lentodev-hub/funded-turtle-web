@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 import AnimatedTurtle from "./AnimatedTurtle";
 
@@ -10,7 +11,14 @@ const greeting = () => {
 
 const WelcomeBanner = ({ compact = false }: { compact?: boolean }) => {
   const { user } = useAuth();
-  if (!user) return null;
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(false), 10000);
+    return () => clearTimeout(t);
+  }, []);
+
+  if (!user || !visible) return null;
 
   const name =
     (user.user_metadata?.username as string) ||
@@ -36,7 +44,7 @@ const WelcomeBanner = ({ compact = false }: { compact?: boolean }) => {
               {greeting()}
             </p>
             <h2 className="font-display font-extrabold text-xl md:text-3xl text-foreground truncate">
-              Hello <span className="text-gradient-gold">{name}</span>, welcome back
+              Hello <span className="text-gradient-gold">{name}</span>, welcome to the pod
             </h2>
             <p className="text-sm text-muted-foreground mt-0.5">
               <span className="text-primary font-semibold">{days}</span> day{days === 1 ? "" : "s"} since you got your account · keep stacking those payouts 🐢
