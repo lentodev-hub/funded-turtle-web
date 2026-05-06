@@ -64,7 +64,7 @@ const TradesPage = () => {
                   </div>
                   <p className="mt-1 text-sm text-muted-foreground flex items-center gap-1">
                     <TrendingUp className="w-3.5 h-3.5 text-primary" />
-                    70% profit split applied · cleared in &lt; 24h
+                    70% profit split · payouts processed Mondays & Tuesdays
                   </p>
                 </div>
               </div>

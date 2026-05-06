@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import CTA from "@/components/CTA";
+import ReferralTracker from "@/components/ReferralTracker";
 import { Gift, Users, RefreshCw, ShieldCheck, Trophy, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -35,6 +36,8 @@ const LoyaltyPage = () => (
       title="Refer 2 friends. Get a free retry on us."
       description="Our way of saying thanks. Every two successful referrals unlocks a free retry of the funded account you bought — perfect insurance if you ever fail."
     />
+
+    <ReferralTracker />
 
     <section className="py-20 bg-background">
       <div className="container max-w-5xl">

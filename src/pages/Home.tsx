@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import TrustedBy from "@/components/TrustedBy";
-import PayoutTicker from "@/components/PayoutTicker";
+
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Comparison from "@/components/Comparison";
@@ -14,7 +14,7 @@ const Home = () => (
     <Hero />
     <TrustedBy />
     <Stats />
-    <PayoutTicker />
+    
     <Features />
     <HowItWorks />
     <Comparison />
