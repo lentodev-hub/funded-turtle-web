@@ -11,7 +11,7 @@ const Challenges = () => {
     <div className="container">
       <div className="max-w-2xl mx-auto text-center mb-16">
         <p className="text-sm font-semibold text-primary uppercase tracking-wider">Challenges</p>
-        <h2 className="mt-3 font-display font-bold text-4xl md:text-5xl">Pick your shell size</h2>
+        <h2 className="mt-3 font-display font-bold text-4xl md:text-5xl">Choose your horns</h2>
         <p className="mt-4 text-muted-foreground text-lg">One-step evaluation. Refundable fee. Same rules, scaled capital.</p>
       </div>
 
