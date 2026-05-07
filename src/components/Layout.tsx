@@ -13,7 +13,7 @@ const Layout = () => {
     <div className="relative min-h-screen flex flex-col bg-background">
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 -z-10 bg-center bg-no-repeat bg-contain opacity-[0.07]"
+        className="pointer-events-none fixed inset-0 -z-10 bg-center bg-no-repeat bg-cover opacity-15"
         style={{ backgroundImage: `url(${oxHead})` }}
       />
       <AnnouncementBar />
