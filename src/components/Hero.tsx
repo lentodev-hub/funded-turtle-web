@@ -57,11 +57,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative h-[380px] md:h-[480px] animate-scale-in">
-          <div className="absolute inset-0 animate-float">
-            <AnimatedOx className="w-full h-full" />
-          </div>
-        </div>
+        <div className="hidden lg:block" />
+
       </div>
 
       {/* Wave divider */}
