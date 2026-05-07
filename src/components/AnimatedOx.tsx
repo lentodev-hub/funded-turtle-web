@@ -1,98 +1,115 @@
-// Animated SVG turtle that swims gently with flapping flippers and rising bubbles.
+// Animated SVG ox/bull that snorts and stomps with a swaying tail and dust puffs.
 const AnimatedOx = ({ className = "" }: { className?: string }) => {
   return (
     <div className={`relative ${className}`}>
       {/* Glow halo */}
       <div className="absolute inset-0 bg-glow animate-pulse-glow rounded-full" aria-hidden />
 
-      {/* Bubbles */}
+      {/* Snort puffs */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         {[
-          { left: "20%", delay: "0s", size: 8 },
-          { left: "35%", delay: "1.2s", size: 12 },
-          { left: "55%", delay: "2.1s", size: 6 },
-          { left: "70%", delay: "0.6s", size: 10 },
-          { left: "85%", delay: "2.8s", size: 7 },
-        ].map((b, i) => (
+          { left: "62%", top: "30%", delay: "0s", size: 10 },
+          { left: "70%", top: "28%", delay: "0.8s", size: 14 },
+          { left: "78%", top: "32%", delay: "1.6s", size: 8 },
+        ].map((p, i) => (
           <span
             key={i}
-            className="absolute bottom-0 rounded-full bg-turtle-glow/40 border border-turtle-glow/60 animate-bubble"
+            className="absolute rounded-full bg-turtle-glow/40 border border-turtle-glow/60 animate-bubble"
             style={{
-              left: b.left,
-              width: b.size,
-              height: b.size,
-              animationDelay: b.delay,
+              left: p.left,
+              top: p.top,
+              width: p.size,
+              height: p.size,
+              animationDelay: p.delay,
             }}
           />
         ))}
       </div>
 
-      {/* Swimming turtle */}
-      <div className="relative animate-swim origin-center">
+      {/* Stomping ox */}
+      <div className="relative animate-float origin-center">
         <svg viewBox="0 0 400 320" className="w-full h-full drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <radialGradient id="shellGrad" cx="50%" cy="40%" r="60%">
+            <radialGradient id="oxBodyGrad" cx="50%" cy="40%" r="65%">
               <stop offset="0%" stopColor="hsl(var(--turtle-glow))" />
               <stop offset="60%" stopColor="hsl(var(--turtle-shell))" />
               <stop offset="100%" stopColor="hsl(var(--ocean-deep))" />
             </radialGradient>
-            <linearGradient id="bodyGrad" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="hsl(158 50% 45%)" />
-              <stop offset="100%" stopColor="hsl(158 60% 25%)" />
+            <linearGradient id="oxLegGrad" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stopColor="hsl(158 55% 30%)" />
+              <stop offset="100%" stopColor="hsl(215 60% 12%)" />
             </linearGradient>
-            <linearGradient id="goldStripe" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0%" stopColor="hsl(var(--gold))" />
-              <stop offset="100%" stopColor="hsl(var(--gold-soft))" />
+            <linearGradient id="hornGrad" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stopColor="hsl(var(--gold-soft))" />
+              <stop offset="100%" stopColor="hsl(var(--gold))" />
             </linearGradient>
           </defs>
 
-          {/* Back flippers */}
-          <ellipse cx="110" cy="220" rx="38" ry="18" fill="url(#bodyGrad)"
-            style={{ transformOrigin: "140px 215px" }}
-            className="animate-flipper-left" />
-          <ellipse cx="290" cy="220" rx="38" ry="18" fill="url(#bodyGrad)"
-            style={{ transformOrigin: "260px 215px" }}
-            className="animate-flipper-right" />
-
           {/* Tail */}
-          <path d="M200 250 L188 285 L212 285 Z" fill="url(#bodyGrad)" />
+          <path
+            d="M95 175 Q60 175 55 215 Q52 240 70 248"
+            stroke="url(#oxLegGrad)"
+            strokeWidth="8"
+            fill="none"
+            strokeLinecap="round"
+            style={{ transformOrigin: "95px 175px" }}
+            className="animate-flipper-left"
+          />
+          <circle cx="70" cy="250" r="8" fill="hsl(var(--gold))" />
+
+          {/* Back legs */}
+          <rect x="135" y="220" width="22" height="60" rx="6" fill="url(#oxLegGrad)"
+            style={{ transformOrigin: "146px 225px" }}
+            className="animate-flipper-right" />
+          <rect x="170" y="220" width="22" height="60" rx="6" fill="url(#oxLegGrad)" />
+          {/* Hooves back */}
+          <rect x="133" y="275" width="26" height="10" rx="3" fill="hsl(var(--ocean-deep))" />
+          <rect x="168" y="275" width="26" height="10" rx="3" fill="hsl(var(--ocean-deep))" />
+
+          {/* Body */}
+          <ellipse cx="200" cy="180" rx="115" ry="62" fill="url(#oxBodyGrad)" stroke="hsl(var(--ocean-deep))" strokeWidth="3" />
+          {/* Belly highlight */}
+          <ellipse cx="200" cy="210" rx="80" ry="20" fill="hsl(var(--turtle-glow) / 0.25)" />
+          {/* Gold flank stripe */}
+          <path d="M130 165 Q200 145 270 165" stroke="url(#hornGrad)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.85" />
+
+          {/* Front legs */}
+          <rect x="240" y="220" width="22" height="60" rx="6" fill="url(#oxLegGrad)" />
+          <rect x="275" y="220" width="22" height="60" rx="6" fill="url(#oxLegGrad)"
+            style={{ transformOrigin: "286px 225px" }}
+            className="animate-flipper-left" />
+          {/* Hooves front */}
+          <rect x="238" y="275" width="26" height="10" rx="3" fill="hsl(var(--ocean-deep))" />
+          <rect x="273" y="275" width="26" height="10" rx="3" fill="hsl(var(--ocean-deep))" />
 
           {/* Head */}
-          <ellipse cx="200" cy="80" rx="45" ry="40" fill="url(#bodyGrad)" />
+          <ellipse cx="305" cy="135" rx="55" ry="48" fill="url(#oxBodyGrad)" stroke="hsl(var(--ocean-deep))" strokeWidth="3" />
+          {/* Snout */}
+          <ellipse cx="335" cy="160" rx="28" ry="22" fill="hsl(158 40% 22%)" />
+          <circle cx="328" cy="158" r="3" fill="hsl(var(--ocean-deep))" />
+          <circle cx="345" cy="158" r="3" fill="hsl(var(--ocean-deep))" />
+          {/* Mouth */}
+          <path d="M325 172 Q335 178 348 172" stroke="hsl(var(--ocean-deep))" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+
           {/* Eyes */}
-          <circle cx="183" cy="72" r="6" fill="white" />
-          <circle cx="217" cy="72" r="6" fill="white" />
-          <circle cx="184" cy="73" r="3" fill="hsl(var(--ocean-deep))" />
-          <circle cx="218" cy="73" r="3" fill="hsl(var(--ocean-deep))" />
-          {/* Smile */}
-          <path d="M188 95 Q200 105 212 95" stroke="hsl(var(--ocean-deep))" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          <circle cx="295" cy="120" r="6" fill="white" />
+          <circle cx="320" cy="120" r="6" fill="white" />
+          <circle cx="296" cy="121" r="3" fill="hsl(var(--ocean-deep))" />
+          <circle cx="321" cy="121" r="3" fill="hsl(var(--ocean-deep))" />
 
-          {/* Front flippers */}
-          <ellipse cx="120" cy="150" rx="42" ry="22" fill="url(#bodyGrad)"
-            style={{ transformOrigin: "150px 145px" }}
-            className="animate-flipper-left" />
-          <ellipse cx="280" cy="150" rx="42" ry="22" fill="url(#bodyGrad)"
-            style={{ transformOrigin: "250px 145px" }}
-            className="animate-flipper-right" />
+          {/* Ears */}
+          <ellipse cx="265" cy="110" rx="14" ry="9" fill="url(#oxBodyGrad)" transform="rotate(-30 265 110)" />
+          <ellipse cx="345" cy="105" rx="14" ry="9" fill="url(#oxBodyGrad)" transform="rotate(30 345 105)" />
 
-          {/* Shell */}
-          <ellipse cx="200" cy="180" rx="105" ry="78" fill="url(#shellGrad)" stroke="hsl(var(--ocean-deep))" strokeWidth="3" />
+          {/* Horns */}
+          <path d="M275 95 Q250 70 235 80 Q245 92 268 105 Z" fill="url(#hornGrad)" stroke="hsl(var(--ocean-deep))" strokeWidth="2" />
+          <path d="M335 95 Q360 70 375 80 Q365 92 342 105 Z" fill="url(#hornGrad)" stroke="hsl(var(--ocean-deep))" strokeWidth="2" />
 
-          {/* Shell hex pattern */}
-          <g stroke="hsl(var(--ocean-deep) / 0.5)" strokeWidth="2" fill="hsl(var(--turtle-shell) / 0.4)">
-            <polygon points="200,140 230,155 230,185 200,200 170,185 170,155" />
-            <polygon points="200,200 230,215 230,245 200,255 170,245 170,215" />
-            <polygon points="155,165 180,178 175,205 145,205 130,180" />
-            <polygon points="245,165 220,178 225,205 255,205 270,180" />
-            <polygon points="155,225 180,235 165,255 140,250 135,230" />
-            <polygon points="245,225 220,235 235,255 260,250 265,230" />
-          </g>
+          {/* Nose ring */}
+          <circle cx="335" cy="170" r="6" fill="none" stroke="hsl(var(--gold))" strokeWidth="2.5" />
 
-          {/* Gold accent stripe on shell top */}
-          <path d="M150 145 Q200 125 250 145" stroke="url(#goldStripe)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.85" />
-
-          {/* Tiny dollar sign on shell - "funded" reference */}
-          <text x="200" y="178" textAnchor="middle" fill="hsl(var(--gold))" fontSize="22" fontWeight="900" fontFamily="sans-serif">$</text>
+          {/* Dollar brand on flank */}
+          <text x="200" y="195" textAnchor="middle" fill="hsl(var(--gold))" fontSize="26" fontWeight="900" fontFamily="sans-serif">$</text>
         </svg>
       </div>
     </div>
