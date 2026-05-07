@@ -56,7 +56,7 @@ const AuthPage = ({ mode }: { mode: Mode }) => {
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        toast.success("Welcome back, trader 🐢");
+        toast.success("Welcome back, trader 🐂");
         navigate(redirectTo, { replace: true });
       }
     } catch (err) {
@@ -85,8 +85,8 @@ const AuthPage = ({ mode }: { mode: Mode }) => {
 
         <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-elegant border border-border animate-fade-in-up">
           <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg justify-center mb-6">
-            <span className="text-2xl">🐢</span>
-            <span>Funded <span className="text-gradient-gold">Turtle</span></span>
+            <span className="text-2xl">🐂</span>
+            <span>Funded <span className="text-gradient-gold">Ox</span></span>
           </Link>
           <h1 className="font-display font-bold text-2xl text-center">
             {mode === "login" ? "Welcome back" : "Create your account"}

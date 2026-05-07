@@ -11,8 +11,8 @@ const posts = [
   },
   {
     tag: "Psychology",
-    title: "Trading like a turtle: the patience edge",
-    excerpt: "The original Turtle Traders made millions by waiting. Here's how to apply it on a funded account.",
+    title: "Trading like an ox: the patience edge",
+    excerpt: "The original Ox Traders made millions by waiting. Here's how to apply it on a funded account.",
     date: "Apr 15, 2026",
   },
   {

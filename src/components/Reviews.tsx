@@ -26,7 +26,7 @@ const reviews = [
     name: "Priya S.",
     role: "Funded Trader · $25K",
     avatar: "P",
-    text: "Smooth onboarding, clear dashboard, and real humans on support. Slow and steady, just like the turtle.",
+    text: "Smooth onboarding, clear dashboard, and real humans on support. Slow and steady, just like the ox.",
   },
 ];
 
