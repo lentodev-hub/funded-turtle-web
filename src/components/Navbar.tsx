@@ -5,6 +5,7 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { useUserRole } from "@/hooks/useUserRole";
 import { toast } from "sonner";
+import oxHead from "@/assets/ox-head.jpg";
 
 const links = [
   { label: "Challenges", to: "/challenges" },
