@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import AnimatedOx from "./AnimatedOx";
+import oxHead from "@/assets/ox-head.jpg";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
