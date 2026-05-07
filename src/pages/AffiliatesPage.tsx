@@ -20,7 +20,7 @@ const AffiliatesPage = () => (
     <PageHeader
       eyebrow="Affiliates"
       title="Earn with every funded trader you refer"
-      description="Join 800+ creators, educators and communities monetizing their audience with Funded Turtle."
+      description="Join 800+ creators, educators and communities monetizing their audience with Funded Ox."
     />
     <section className="py-20 bg-background">
       <div className="container max-w-5xl">

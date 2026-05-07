@@ -15,14 +15,14 @@ const Comparison = () => (
       <div className="max-w-2xl mx-auto text-center mb-14">
         <p className="text-sm font-semibold text-primary uppercase tracking-wider">The difference</p>
         <h2 className="mt-3 font-display font-bold text-4xl md:text-5xl">
-          Why traders pick <span className="text-gradient-primary">Funded Turtle</span>
+          Why traders pick <span className="text-gradient-primary">Funded Ox</span>
         </h2>
       </div>
 
       <div className="max-w-3xl mx-auto rounded-2xl border border-border bg-gradient-card shadow-elegant overflow-hidden">
         <div className="grid grid-cols-3 bg-secondary/60 text-sm font-semibold">
           <div className="p-4 md:p-5">Feature</div>
-          <div className="p-4 md:p-5 text-center text-primary">Funded Turtle</div>
+          <div className="p-4 md:p-5 text-center text-primary">Funded Ox</div>
           <div className="p-4 md:p-5 text-center text-muted-foreground">Other firms</div>
         </div>
         {rows.map((r, i) => (

@@ -6,7 +6,7 @@ const faqs = [
   { q: "Are there any consistency or minimum-day rules?", a: "No. Hit the profit target whenever you're ready while respecting the drawdown rules — that's it." },
   { q: "What's the refund policy?", a: "Your challenge fee is fully refunded on your first successful payout from the funded account." },
   { q: "Can I trade news and hold positions overnight?", a: "Yes. News trading, weekend holds and EAs are all permitted on every plan." },
-  { q: "How does Funded Turtle integrate with my brokerage?", a: "We're a fully white-label-ready front end. Plug in any compatible provider via the configuration file and you're live in minutes." },
+  { q: "How does Funded Ox integrate with my brokerage?", a: "We're a fully white-label-ready front end. Plug in any compatible provider via the configuration file and you're live in minutes." },
 ];
 
 const FAQ = () => (

@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 const FeaturesPage = () => (
   <>
     <PageHeader
-      eyebrow="Why Funded Turtle"
+      eyebrow="Why Funded Ox"
       title="Built for traders who play the long game"
       description="Patience pays. Our rules, payouts and platform are designed to reward disciplined, consistent trading."
     />

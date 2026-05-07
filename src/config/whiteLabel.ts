@@ -1,7 +1,7 @@
 /**
  * White-Label Provider Configuration
  * ----------------------------------
- * Funded Turtle is designed to plug into any prop-firm / funded-account
+ * Funded Ox is designed to plug into any prop-firm / funded-account
  * white-label backend (e.g. Brokeret, Match-Trader, cTrader, YouTrade,
  * TradeLocker, Plexytrade, etc.).
  *
@@ -17,9 +17,9 @@
 
 export const whiteLabel = {
   brand: {
-    name: "Funded Turtle",
+    name: "Funded Ox",
     tagline: "Slow and steady wins the funded account.",
-    supportEmail: "support@fundedturtle.com",
+    supportEmail: "support@fundedox.com",
   },
 
   provider: {

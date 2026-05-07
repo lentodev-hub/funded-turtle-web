@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import AnimatedTurtle from "@/components/AnimatedTurtle";
+import AnimatedOx from "@/components/AnimatedOx";
 import { z } from "zod";
 
 const schema = z.object({
@@ -56,7 +56,7 @@ const AuthPage = ({ mode }: { mode: Mode }) => {
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        toast.success("Welcome back, trader 🐢");
+        toast.success("Welcome back, trader 🐂");
         navigate(redirectTo, { replace: true });
       }
     } catch (err) {
@@ -78,15 +78,15 @@ const AuthPage = ({ mode }: { mode: Mode }) => {
       <div className="absolute inset-0 bg-glow opacity-50 pointer-events-none" />
       <div className="relative grid lg:grid-cols-2 gap-10 items-center max-w-5xl w-full">
         <div className="hidden lg:flex flex-col items-center text-center">
-          <div className="w-72 h-72"><AnimatedTurtle className="w-full h-full" /></div>
+          <div className="w-72 h-72"><AnimatedOx className="w-full h-full" /></div>
           <h2 className="mt-4 font-display font-extrabold text-3xl">Slow and steady wins.</h2>
-          <p className="mt-2 text-white/70 max-w-sm">Join 12,000+ traders growing funded accounts with Funded Turtle.</p>
+          <p className="mt-2 text-white/70 max-w-sm">Join 12,000+ traders growing funded accounts with Funded Ox.</p>
         </div>
 
         <div className="bg-card text-card-foreground rounded-2xl p-8 shadow-elegant border border-border animate-fade-in-up">
           <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg justify-center mb-6">
-            <span className="text-2xl">🐢</span>
-            <span>Funded <span className="text-gradient-gold">Turtle</span></span>
+            <span className="text-2xl">🐂</span>
+            <span>Funded <span className="text-gradient-gold">Ox</span></span>
           </Link>
           <h1 className="font-display font-bold text-2xl text-center">
             {mode === "login" ? "Welcome back" : "Create your account"}
@@ -99,7 +99,7 @@ const AuthPage = ({ mode }: { mode: Mode }) => {
             {mode === "signup" && (
               <div className="space-y-1.5">
                 <Label htmlFor="username">Username</Label>
-                <Input id="username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="turtletrader" required />
+                <Input id="username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="oxtrader" required />
               </div>
             )}
             <div className="space-y-1.5">

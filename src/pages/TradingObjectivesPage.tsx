@@ -23,7 +23,7 @@ const phases = [
     ],
   },
   {
-    name: "Funded Turtle Account",
+    name: "Funded Ox Account",
     rows: [
       ["Profit target", "—"],
       ["Max daily loss", "5%"],

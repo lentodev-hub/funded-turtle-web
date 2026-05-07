@@ -6,8 +6,8 @@ const Footer = () => (
     <div className="container grid md:grid-cols-4 gap-8">
       <div className="md:col-span-2">
         <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg text-white">
-          <span className="text-2xl">🐢</span>
-          <span>Funded <span className="text-gradient-gold">Turtle</span></span>
+          <span className="text-2xl">🐂</span>
+          <span>Funded <span className="text-gradient-gold">Ox</span></span>
         </Link>
         <p className="mt-3 text-sm max-w-sm">{whiteLabel.brand.tagline}</p>
         <p className="mt-4 text-xs text-white/50">Powered by <span className="text-white/80">{whiteLabel.provider.name}</span></p>

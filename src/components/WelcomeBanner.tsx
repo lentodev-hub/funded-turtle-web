@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "@/context/AuthContext";
-import AnimatedTurtle from "./AnimatedTurtle";
+import AnimatedOx from "./AnimatedOx";
 
 const greeting = () => {
   const h = new Date().getHours();
@@ -37,7 +37,7 @@ const WelcomeBanner = ({ compact = false }: { compact?: boolean }) => {
       <div className="container">
         <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/15 via-background to-background shadow-elegant px-5 py-4 md:px-7 md:py-5 flex items-center gap-4 md:gap-6 animate-fade-in">
           <div className="w-16 h-16 md:w-20 md:h-20 shrink-0">
-            <AnimatedTurtle className="w-full h-full" />
+            <AnimatedOx className="w-full h-full" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
@@ -47,7 +47,7 @@ const WelcomeBanner = ({ compact = false }: { compact?: boolean }) => {
               Hello <span className="text-gradient-gold">{name}</span>, welcome to the pod
             </h2>
             <p className="text-sm text-muted-foreground mt-0.5">
-              <span className="text-primary font-semibold">{days}</span> day{days === 1 ? "" : "s"} since you got your account · keep stacking those payouts 🐢
+              <span className="text-primary font-semibold">{days}</span> day{days === 1 ? "" : "s"} since you got your account · keep stacking those payouts 🐂
             </p>
           </div>
         </div>

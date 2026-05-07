@@ -11,8 +11,8 @@ const posts = [
   },
   {
     tag: "Psychology",
-    title: "Trading like a turtle: the patience edge",
-    excerpt: "The original Turtle Traders made millions by waiting. Here's how to apply it on a funded account.",
+    title: "Trading like an ox: the patience edge",
+    excerpt: "The original Ox Traders made millions by waiting. Here's how to apply it on a funded account.",
     date: "Apr 15, 2026",
   },
   {
@@ -45,7 +45,7 @@ const BlogPage = () => (
   <>
     <PageHeader
       eyebrow="Insights"
-      title="The Funded Turtle blog"
+      title="The Funded Ox blog"
       description="Strategy, psychology and behind-the-scenes from the world of prop trading."
     />
     <section className="py-20 bg-background">

@@ -1,4 +1,4 @@
-import AnimatedTurtle from "./AnimatedTurtle";
+import AnimatedOx from "./AnimatedOx";
 
 type Props = { eyebrow: string; title: string; description?: string };
 
@@ -15,7 +15,7 @@ const PageHeader = ({ eyebrow, title, description }: Props) => (
         {description && <p className="mt-4 text-lg text-white/75 max-w-2xl">{description}</p>}
       </div>
       <div className="hidden md:block w-48 h-48">
-        <AnimatedTurtle className="w-full h-full" />
+        <AnimatedOx className="w-full h-full" />
       </div>
     </div>
     <svg className="absolute bottom-0 inset-x-0 w-full" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden>

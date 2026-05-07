@@ -16,7 +16,7 @@ const Features = () => (
     <div className="container relative">
       <Reveal>
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider">Why Funded Turtle</p>
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider">Why Funded Ox</p>
           <h2 className="mt-3 font-display font-bold text-4xl md:text-5xl">Built for traders who play the long game</h2>
           <p className="mt-4 text-muted-foreground text-lg">Patience pays. Our rules, payouts and platform are designed to reward disciplined, consistent trading.</p>
         </div>

@@ -78,7 +78,7 @@ const LoyaltyPage = () => (
         </div>
 
         <div className="mt-12 text-xs text-muted-foreground text-center max-w-2xl mx-auto">
-          A "successful referral" is defined as a new user who purchases and passes a challenge evaluation. Free retry is granted for the same plan/account size you originally purchased and is non-transferable. Funded Turtle reserves the right to update program terms.
+          A "successful referral" is defined as a new user who purchases and passes a challenge evaluation. Free retry is granted for the same plan/account size you originally purchased and is non-transferable. Funded Ox reserves the right to update program terms.
         </div>
       </div>
     </section>
