@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import AnimatedOx from "./AnimatedOx";
+import oxHead from "@/assets/ox-head.jpg";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
@@ -9,6 +10,12 @@ const Hero = () => {
   const startHref = user ? "/challenges" : "/signup?next=/challenges";
   return (
     <section className="relative overflow-hidden bg-hero text-white pt-28 pb-24 md:pt-36 md:pb-32">
+      {/* Ox background */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-20 pointer-events-none"
+        style={{ backgroundImage: `url(${oxHead})` }}
+      />
       {/* Underwater light rays */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
         <div className="absolute -top-20 left-1/4 w-32 h-[700px] bg-turtle-glow/20 blur-3xl rotate-12 animate-float-slow" />
