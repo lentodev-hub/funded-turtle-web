@@ -3,16 +3,22 @@ import { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import AnnouncementBar from "./AnnouncementBar";
+import oxHead from "@/assets/ox-head.jpg";
 
 const Layout = () => {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="relative min-h-screen flex flex-col bg-background">
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 -z-10 bg-center bg-no-repeat bg-contain opacity-[0.07]"
+        style={{ backgroundImage: `url(${oxHead})` }}
+      />
       <AnnouncementBar />
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 relative">
         <Outlet />
       </main>
       <Footer />
