@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import AnimatedTurtle from "./AnimatedTurtle";
+import AnimatedOx from "./AnimatedOx";
 import { whiteLabel } from "@/config/whiteLabel";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,7 @@ const CTA = () => (
         </div>
       </div>
       <div className="hidden md:block w-64 h-64 animate-float">
-        <AnimatedTurtle className="w-full h-full" />
+        <AnimatedOx className="w-full h-full" />
       </div>
     </div>
   </section>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import AnimatedTurtle from "./AnimatedTurtle";
+import AnimatedOx from "./AnimatedOx";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
@@ -29,7 +29,7 @@ const Hero = () => {
             Get funded.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/75 max-w-xl">
-            Funded Turtle gives ambitious traders up to <span className="text-gold font-semibold">$200,000</span> in
+            Funded Ox gives ambitious traders up to <span className="text-gold font-semibold">$200,000</span> in
             simulated capital. Pass our challenge, keep up to <span className="text-gold font-semibold">70%</span> of
             the profits. Slow and steady wins.
           </p>
@@ -52,7 +52,7 @@ const Hero = () => {
 
         <div className="relative h-[380px] md:h-[480px] animate-scale-in">
           <div className="absolute inset-0 animate-float">
-            <AnimatedTurtle className="w-full h-full" />
+            <AnimatedOx className="w-full h-full" />
           </div>
         </div>
       </div>

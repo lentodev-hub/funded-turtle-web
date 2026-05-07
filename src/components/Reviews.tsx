@@ -14,7 +14,7 @@ const reviews = [
     name: "Aisha R.",
     role: "Funded Trader · $50K",
     avatar: "A",
-    text: "I've tried four other prop firms. Funded Turtle is the only one where the payout came faster than promised.",
+    text: "I've tried four other prop firms. Funded Ox is the only one where the payout came faster than promised.",
   },
   {
     name: "Diego L.",
@@ -66,7 +66,7 @@ const Reviews = () => (
       <div className="mt-20 max-w-2xl mx-auto text-center mb-10">
         <p className="text-sm font-semibold text-primary uppercase tracking-wider">Inside the community</p>
         <h3 className="mt-3 font-display font-bold text-3xl md:text-4xl">A real community of traders</h3>
-        <p className="mt-3 text-muted-foreground">From global meetups to working sessions — Funded Turtle traders connect, learn and grow together.</p>
+        <p className="mt-3 text-muted-foreground">From global meetups to working sessions — Funded Ox traders connect, learn and grow together.</p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-5">

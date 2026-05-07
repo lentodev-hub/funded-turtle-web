@@ -1,5 +1,5 @@
 // Animated SVG turtle that swims gently with flapping flippers and rising bubbles.
-const AnimatedTurtle = ({ className = "" }: { className?: string }) => {
+const AnimatedOx = ({ className = "" }: { className?: string }) => {
   return (
     <div className={`relative ${className}`}>
       {/* Glow halo */}
@@ -99,4 +99,4 @@ const AnimatedTurtle = ({ className = "" }: { className?: string }) => {
   );
 };
 
-export default AnimatedTurtle;
+export default AnimatedOx;

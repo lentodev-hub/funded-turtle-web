@@ -45,7 +45,7 @@ const BlogPage = () => (
   <>
     <PageHeader
       eyebrow="Insights"
-      title="The Funded Turtle blog"
+      title="The Funded Ox blog"
       description="Strategy, psychology and behind-the-scenes from the world of prop trading."
     />
     <section className="py-20 bg-background">

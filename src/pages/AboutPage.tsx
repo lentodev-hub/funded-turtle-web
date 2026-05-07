@@ -14,7 +14,7 @@ const AboutPage = () => (
     <PageHeader
       eyebrow="About us"
       title="Built by traders, for traders"
-      description="Funded Turtle was founded on one belief: patient, disciplined trading deserves serious capital and a partner that pays out, fast."
+      description="Funded Ox was founded on one belief: patient, disciplined trading deserves serious capital and a partner that pays out, fast."
     />
     <section className="py-20 bg-background">
       <div className="container max-w-4xl space-y-10">
