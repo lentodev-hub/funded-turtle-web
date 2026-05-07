@@ -42,7 +42,7 @@ const CheckoutPage = () => {
       });
       if (error) throw error;
       setSuccess(true);
-      toast.success("Challenge purchased! Welcome to the pod 🐂");
+      toast.success("Challenge purchased! Welcome to the herd 🐂");
     } catch (e) {
       toast.error(e instanceof Error ? e.message : "Payment failed");
     } finally {

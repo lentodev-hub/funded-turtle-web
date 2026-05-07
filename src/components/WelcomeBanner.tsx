@@ -44,7 +44,7 @@ const WelcomeBanner = ({ compact = false }: { compact?: boolean }) => {
               {greeting()}
             </p>
             <h2 className="font-display font-extrabold text-xl md:text-3xl text-foreground truncate">
-              Hello <span className="text-gradient-gold">{name}</span>, welcome to the pod
+              Hello <span className="text-gradient-gold">{name}</span>, welcome to the herd
             </h2>
             <p className="text-sm text-muted-foreground mt-0.5">
               <span className="text-primary font-semibold">{days}</span> day{days === 1 ? "" : "s"} since you got your account · keep stacking those payouts 🐂
