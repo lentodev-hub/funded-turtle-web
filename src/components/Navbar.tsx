@@ -5,6 +5,7 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { useUserRole } from "@/hooks/useUserRole";
 import { toast } from "sonner";
+import oxHead from "@/assets/ox-head.jpg";
 
 const links = [
   { label: "Challenges", to: "/challenges" },
@@ -40,7 +41,7 @@ const Navbar = () => {
     <header className="fixed top-7 md:top-8 inset-x-0 z-50 bg-ocean-deep/70 backdrop-blur-xl border-b border-white/10">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg text-white">
-          <span className="text-2xl">🐂</span>
+          <img src={oxHead} alt="Funded Ox logo" className="w-9 h-9 rounded-full object-cover ring-2 ring-gold/60" />
           {location.pathname !== "/trades" && (
             <span>Funded <span className="text-gradient-gold">Ox</span></span>
           )}

@@ -1,12 +1,13 @@
 import { whiteLabel } from "@/config/whiteLabel";
 import { Link } from "react-router-dom";
+import oxHead from "@/assets/ox-head.jpg";
 
 const Footer = () => (
   <footer className="bg-ocean-deep text-white/70 py-12 border-t border-white/10">
     <div className="container grid md:grid-cols-4 gap-8">
       <div className="md:col-span-2">
         <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg text-white">
-          <span className="text-2xl">🐂</span>
+          <img src={oxHead} alt="Funded Ox logo" className="w-9 h-9 rounded-full object-cover ring-2 ring-gold/60" />
           <span>Funded <span className="text-gradient-gold">Ox</span></span>
         </Link>
         <p className="mt-3 text-sm max-w-sm">{whiteLabel.brand.tagline}</p>
