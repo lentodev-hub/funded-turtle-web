@@ -25,6 +25,7 @@ import CareersPage from "./pages/CareersPage";
 import LegalPage from "./pages/LegalPage";
 import LoyaltyPage from "./pages/LoyaltyPage";
 import TradesPage from "./pages/TradesPage";
+import WalletPage from "./pages/WalletPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => (
               <Route path="/legal/:slug" element={<LegalPage />} />
               <Route path="/loyalty" element={<LoyaltyPage />} />
               <Route path="/trades" element={<TradesPage />} />
+              <Route path="/wallet" element={<WalletPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/admin" element={<AdminPage />} />
             </Route>
