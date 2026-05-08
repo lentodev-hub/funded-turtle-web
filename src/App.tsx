@@ -25,6 +25,7 @@ import CareersPage from "./pages/CareersPage";
 import LegalPage from "./pages/LegalPage";
 import LoyaltyPage from "./pages/LoyaltyPage";
 import TradesPage from "./pages/TradesPage";
+import WalletPage from "./pages/WalletPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
