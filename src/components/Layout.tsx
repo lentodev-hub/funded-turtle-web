@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import AnnouncementBar from "./AnnouncementBar";
-import oxHead from "@/assets/ox-head.jpg";
+import oxHead from "@/assets/hero-2.png";
 
 const Layout = () => {
   const { pathname } = useLocation();
