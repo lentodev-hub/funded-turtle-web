@@ -10,6 +10,7 @@ import oxHead from "@/assets/ox-head.jpg";
 const links = [
   { label: "Challenges", to: "/challenges" },
   { label: "Trades", to: "/trades" },
+  { label: "Leaderboard", to: "/leaderboard" },
   { label: "Rules", to: "/trading-rules" },
   { label: "Scaling", to: "/scaling-plan" },
   { label: "Academy", to: "/academy" },
