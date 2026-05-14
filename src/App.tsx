@@ -26,6 +26,7 @@ import LegalPage from "./pages/LegalPage";
 import LoyaltyPage from "./pages/LoyaltyPage";
 import TradesPage from "./pages/TradesPage";
 import WalletPage from "./pages/WalletPage";
+import LeaderboardPage from "./pages/LeaderboardPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
