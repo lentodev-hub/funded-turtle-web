@@ -14,6 +14,99 @@ export type Database = {
   }
   public: {
     Tables: {
+      academy_courses: {
+        Row: {
+          body: string | null
+          cover_url: string | null
+          created_at: string
+          description: string | null
+          id: string
+          lessons_label: string | null
+          level: string | null
+          pdf_url: string | null
+          published: boolean
+          slug: string
+          sort_order: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          body?: string | null
+          cover_url?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          lessons_label?: string | null
+          level?: string | null
+          pdf_url?: string | null
+          published?: boolean
+          slug: string
+          sort_order?: number
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          body?: string | null
+          cover_url?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          lessons_label?: string | null
+          level?: string | null
+          pdf_url?: string | null
+          published?: boolean
+          slug?: string
+          sort_order?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      blog_posts: {
+        Row: {
+          body: string | null
+          cover_url: string | null
+          created_at: string
+          excerpt: string | null
+          id: string
+          pdf_url: string | null
+          published: boolean
+          published_at: string
+          slug: string
+          tag: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          body?: string | null
+          cover_url?: string | null
+          created_at?: string
+          excerpt?: string | null
+          id?: string
+          pdf_url?: string | null
+          published?: boolean
+          published_at?: string
+          slug: string
+          tag?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          body?: string | null
+          cover_url?: string | null
+          created_at?: string
+          excerpt?: string | null
+          id?: string
+          pdf_url?: string | null
+          published?: boolean
+          published_at?: string
+          slug?: string
+          tag?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       challenge_purchases: {
         Row: {
           account_size: number
@@ -50,6 +143,39 @@ export type Database = {
           stripe_session_id?: string | null
           updated_at?: string
           user_id?: string
+        }
+        Relationships: []
+      }
+      faq_items: {
+        Row: {
+          answer: string
+          category: string | null
+          created_at: string
+          id: string
+          published: boolean
+          question: string
+          sort_order: number
+          updated_at: string
+        }
+        Insert: {
+          answer: string
+          category?: string | null
+          created_at?: string
+          id?: string
+          published?: boolean
+          question: string
+          sort_order?: number
+          updated_at?: string
+        }
+        Update: {
+          answer?: string
+          category?: string | null
+          created_at?: string
+          id?: string
+          published?: boolean
+          question?: string
+          sort_order?: number
+          updated_at?: string
         }
         Relationships: []
       }
