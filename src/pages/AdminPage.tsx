@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
+import CmsManager from "@/components/admin/CmsManager";
 
 type Profile = { id: string; username: string | null; created_at: string };
 type Purchase = {
@@ -130,6 +131,7 @@ const AdminPage = () => {
             <TabsTrigger value="users">Users</TabsTrigger>
             <TabsTrigger value="purchases">Purchases</TabsTrigger>
             <TabsTrigger value="payouts">Payouts</TabsTrigger>
+            <TabsTrigger value="content">Content</TabsTrigger>
           </TabsList>
 
           <TabsContent value="users" className="mt-4">
@@ -250,6 +252,10 @@ const AdminPage = () => {
                 </TableBody>
               </Table>
             </div>
+          </TabsContent>
+
+          <TabsContent value="content" className="mt-4">
+            <CmsManager />
           </TabsContent>
         </Tabs>
 
