@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
 import { Trash2, FileText, Image as ImageIcon, Plus, Pencil } from "lucide-react";
 import { toast } from "sonner";
-import RichTextEditor from "./RichTextEditor";
+import RichTextEditor from "@/components/RichTextEditor";
 import { uploadCmsFile, slugify } from "@/lib/cmsUpload";
 
 type Blog = { id: string; tag: string | null; title: string; slug: string; excerpt: string | null; body: string | null; cover_url: string | null; pdf_url: string | null; published: boolean; published_at: string };
